@@ -30,7 +30,7 @@ CREATE TABLE Exercise (
     title TEXT NOT NULL, -- Titre de l'exercice
     description TEXT NOT NULL, -- Description/énoncé de l'exercice
     type TEXT CHECK(type IN ('STDIN_STDOUT', 'INCLUDE')) NOT NULL, -- Type d'exercice (entrée/sortie ou fonction à compléter)
-	exercise_image BLOB,  -- Image de l'exercice (stockée sous forme binaire)
+    exercise_image BLOB,  -- Image de l'exercice (stockée sous forme binaire)
     solution_image BLOB,  -- Image de la solution (stockée sous forme binaire)
     solution TEXT, -- Solution modèle attendue pour l'exercice
     difficulty INT CHECK(difficulty IN (1, 2, 3)) NOT NULL, -- Niveau de difficulté (1 = facile, 2 = moyen, 3 = difficile)
